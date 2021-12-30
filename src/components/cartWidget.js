@@ -1,7 +1,6 @@
 import { ShoppingBagIcon, XIcon } from "@heroicons/react/solid"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
-import { useState } from "react/cjs/react.development"
 import { CartContext } from "../contexts/cartContext"
 import { decryptPayload } from "../utils/enc"
 
