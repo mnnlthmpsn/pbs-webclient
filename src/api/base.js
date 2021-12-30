@@ -1,0 +1,1 @@
+export const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:1337/api' : 'https://pbs-back.herokuapp.com/api'
