@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { req_get_categories } from "../api/categories"
 import Subscribe from "../components/subscribe"
 import Testimonials from "../components/testimonials"
+import Banner from "../components/banner"
 
 const Home = () => {
 
@@ -20,6 +21,8 @@ const Home = () => {
 
     return (
         <div className="flex flex-col justify-center">
+            <Banner />
+
             <div className="h-24 px-10 py-4 flex items-center">
                 <p className=" text-center lg:text-left w-full lg:pl-10 font-bold text-2xl">Browse Categories</p>
             </div>

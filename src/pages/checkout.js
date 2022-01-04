@@ -65,7 +65,7 @@ const Checkout = () => {
             </div>
 
             {/* mobile checkout */}
-            <p>Checkout for mobile view here</p>
+            <p className="lg:hidden">Checkout for mobile view here</p>
 
             <BillingInfo info={info} setInfo={setInfo}/>
 

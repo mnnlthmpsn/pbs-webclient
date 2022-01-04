@@ -6,7 +6,7 @@ import { CartContext } from "../contexts/cartContext"
 const ProductDetails = ({ open, setOpen, product }) => {
 
     const { addToCart } = useContext(CartContext)
-    
+
     const calculateDiscount = () => {
         const amt_to_deduct = (product.attributes.discount / 100) * product.attributes.price
         return product.attributes.price - amt_to_deduct
@@ -34,15 +34,13 @@ const ProductDetails = ({ open, setOpen, product }) => {
                     <p className="font-bold text-lg py-3">More Info</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {product.attributes.images.data.map(img => (
-                            <img src={img.attributes.url} key={img.attributes.url}/>
+                            <img src={img.attributes.url} key={img.attributes.url} />
                         ))}
                     </div>
                 </div>
                 <div className="w-full h-10 2xl:h-12 flex">
                     <button className="w-full h-full bg-[#1D2798] text-white 2xl:text-base  hover:bg-[#1D2781] duration-150 border-r" onClick={() => addToCart(product)}>Add to Cart</button>
-                    <Link to='/checkout
-                    
-                    '><button className="w-full h-full bg-[#999] text-white 2xl:text-base hover:bg-gray-500 duration-150">Checkout</button></Link>
+                    <Link to='/checkout' className="w-full h-full bg-[#999] flex items-center justify-center text-white 2xl:text-base hover:bg-gray-500 duration-150">Checkout</Link>
                 </div>
             </div>
 

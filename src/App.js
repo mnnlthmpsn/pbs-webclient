@@ -9,6 +9,7 @@ import Services from "./pages/services"
 import CategoryProducts from "./pages/categoryProducts"
 import NotFound from "./pages/notFound"
 import Checkout from "./pages/checkout"
+import MyLoader from "./components/loader"
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <MyLoader />
     </Fragment>
   )
 }
