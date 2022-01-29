@@ -34,7 +34,7 @@ const ProductDetails = ({ open, setOpen, product }) => {
                     <p className="font-bold text-lg py-3">More Info</p>
                     <div className="grid grid-cols-1 lg:grid-cols-2">
                         {product.attributes.images.data.map(img => (
-                            <img src={img.attributes.url} key={img.attributes.url} />
+                            <img alt='' src={img.attributes.url} key={img.attributes.url} />
                         ))}
                     </div>
                 </div>

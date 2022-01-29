@@ -26,7 +26,7 @@ const Banner = () => {
             <Slider autoplay={3000} nextButton={nextButton()} previousButton={prevButton()}>
                 {
                     [1, 2, 3, 4].map(item => (
-                        <div className='grid grid-cols-2 align-start' style={{ backgroundImage: 'url(/assets/img/slide-1.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                        <div key={item} className='grid grid-cols-2 align-start' style={{ backgroundImage: 'url(/assets/img/slide-1.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                             <div className='flex flex-col items-start justify-center pl-24'>
                                 <h1 className='font-bold text-4xl'>Some Long Christmas title here</h1>
                                 <p className='text-lg pb-4'>Short description</p>

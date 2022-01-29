@@ -11,7 +11,6 @@ const Home = () => {
 
     const getCategories = async () => {
         const { data } = await req_get_categories()
-        console.log(data)
         setCategories(data)
     }
 
@@ -30,7 +29,7 @@ const Home = () => {
                 {
                     categories.map(category => (
                         <Link to={`category/${category.attributes.slug}`} state={{ category: category.attributes.title }} key={category.id}>
-                            <img src={category.attributes.image.data.attributes.url} className="scale-95 hover:scale-100 duration-500 ease-out z-0 cursor-pointer" />
+                            <img alt='' src={category.attributes.image.data.attributes.url} className="scale-95 hover:scale-100 duration-500 ease-out z-0 cursor-pointer" />
                             <p className="text-center text-lg pt-2 font-light">{category.attributes.title}</p>
                         </Link>
                     ))
