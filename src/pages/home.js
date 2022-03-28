@@ -25,11 +25,11 @@ const Home = () => {
             <div className="h-24 px-10 py-4 flex items-center">
                 <p className=" text-center lg:text-left w-full lg:pl-10 font-bold text-2xl">Browse Categories</p>
             </div>
-            <div className="grid grid-cols-1 p-10 lg:grid-cols-3 gap-10 lg:px-24">
+            <div className="grid grid-cols-1 px-10 pb-32 lg:grid-cols-3 gap-24 lg:px-24">
                 {
                     categories.map(category => (
                         <Link to={`category/${category.attributes.slug}`} state={{ category: category.attributes.title }} key={category.id}>
-                            <img alt='' src={category.attributes.image.data.attributes.url} className="scale-95 hover:scale-100 duration-500 ease-out z-0 cursor-pointer" />
+                            <img alt='' src={category.attributes.image.data.attributes.url} className="scale-95 hover:scale-100 duration-500 h-full ease-out z-0 cursor-pointer" />
                             <p className="text-center text-lg pt-2 font-light">{category.attributes.title}</p>
                         </Link>
                     ))
